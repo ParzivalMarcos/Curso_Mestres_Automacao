@@ -1,0 +1,10 @@
+1) Monte uma automação que navegue até o site https://cursoautomacao.netlify.app/
+
+2) Marque dinamicamente o Radio button, de acordo com o que for digitado pelo usuário
+
+3) Peça ao usuário 'Qual comentário gostaria de deixar?' e depois use a resposta deste comentário para preencher o campo abaixo do campo "Parágrafo"
+
+4) Marque dinamicamente Quais níveis de acesso devem ser liberados para aquele usuário
+
+
+-> Busque usar estrutura de classes, métodos e waits para que tudo seja feito dentro de uma velocidade mais humana

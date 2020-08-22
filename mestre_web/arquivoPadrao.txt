@@ -1,0 +1,35 @@
+from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
+
+# from selenium.webdriver.common.by import By
+# from selenium.webdriver.support.ui import WebDriverWait
+# from selenium.webdriver.support import expected_conditions
+# from selenium.common.exceptions import *
+
+class Automacao:
+    def __init__(self):
+        chrome_options = Options()
+        chrome_options.add_argument('--lang=pt-BR')
+        self.driver = webdriver.Chrome(
+            executable_path=r'./chromedriver.exe', options=chrome_options)
+        self.driver.implicitly_wait(10)  # wait implicito
+        self.wait = WebDriverWait(
+            driver=self.driver,
+            timeout=10,
+            poll_frequency=1,
+            ingored_exceptions=[
+                NoSuchElementExcpetion, 
+                ElementNotVisibleException,
+                ElementNotSelectableException]
+            )
+
+
+    def Iniciar(self):
+        self.driver.get("https://cursoautomacao.netlify.app/")
+        # botao_desafio = self.driver.find_element_by_xpath("//a[text()='Desafios']")
+        # botao_desafio.click()
+
+        # teste = self.wait.untiu(expected_conditions.element_to_be_clickable((By.XPATH, "//a[text()='Desafios']"))
+
+automacao = Automacao()
+automacao.Iniciar()

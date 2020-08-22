@@ -1,0 +1,5 @@
+DEBUG 22/06/2020 12:31:23: Insto é uma mensagem nível debug
+INFO 22/06/2020 12:31:23: Insto é uma mensagem nível info
+WARNING 22/06/2020 12:31:23: Insto é uma mensagem nível warningg
+ERROR 22/06/2020 12:31:23: Insto é uma mensagem nível error
+CRITICAL 22/06/2020 12:31:23: Insto é uma mensagem nível critial

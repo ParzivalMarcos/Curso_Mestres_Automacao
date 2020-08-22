@@ -1,0 +1,20 @@
+[0808/152804.561:ERROR:process_reader_win.cc(123)] NtOpenThread: {Acesso Negado} Um processo solicitou acesso a um objeto, mas o direito de acesso não lhe foi concedido. (0xc0000022)
+[0808/152804.575:ERROR:exception_snapshot_win.cc(98)] thread ID 4824 not found in process
+[0808/152804.580:ERROR:process_reader_win.cc(123)] NtOpenThread: {Acesso Negado} Um processo solicitou acesso a um objeto, mas o direito de acesso não lhe foi concedido. (0xc0000022)
+[0808/152804.580:ERROR:exception_snapshot_win.cc(98)] thread ID 9628 not found in process
+[0808/153715.538:ERROR:process_memory_win.cc(73)] ReadMemory at 0x13b96813a20 of 72 bytes failed: Somente uma parte de um pedido ReadProcessMemory ou WriteProcessMemory foi concluída. (0x12B)
+[0808/153715.541:WARNING:pe_image_annotations_reader.cc(134)] could not read annotations list object in C:\Program Files (x86)\Google\Chrome\Application\84.0.4147.105\chrome_elf.dll
+[0808/153715.541:ERROR:process_memory_win.cc(73)] ReadMemory at 0x13b988d0000 of 64 bytes failed: Somente uma parte de um pedido ReadProcessMemory ou WriteProcessMemory foi concluída. (0x12B)
+[0808/153715.541:WARNING:pe_image_reader.cc(340)] could not read dos header from C:\WINDOWS\System32\bcryptPrimitives.dll
+[0808/153715.541:ERROR:process_memory_win.cc(73)] ReadMemory at 0x7ffb614f0000 of 64 bytes failed: Somente uma parte de um pedido ReadProcessMemory ou WriteProcessMemory foi concluída. (0x12B)
+[0808/153715.541:WARNING:pe_image_reader.cc(340)] could not read dos header from C:\Program Files (x86)\Google\Chrome\Application\84.0.4147.105\chrome.dll
+[0808/153715.541:ERROR:process_memory_win.cc(73)] ReadMemory at 0x13b98590000 of 64 bytes failed: Somente uma parte de um pedido ReadProcessMemory ou WriteProcessMemory foi concluída. (0x12B)
+[0808/153715.541:WARNING:pe_image_reader.cc(340)] could not read dos header from C:\WINDOWS\System32\combase.dll
+[0808/160729.299:ERROR:process_reader_win.cc(123)] NtOpenThread: {Acesso Negado} Um processo solicitou acesso a um objeto, mas o direito de acesso não lhe foi concedido. (0xc0000022)
+[0808/160729.300:ERROR:exception_snapshot_win.cc(98)] thread ID 15896 not found in process
+[0808/160729.316:ERROR:process_reader_win.cc(123)] NtOpenThread: {Acesso Negado} Um processo solicitou acesso a um objeto, mas o direito de acesso não lhe foi concedido. (0xc0000022)
+[0808/160729.316:ERROR:exception_snapshot_win.cc(98)] thread ID 15304 not found in process
+[0808/160916.876:ERROR:process_reader_win.cc(123)] NtOpenThread: {Acesso Negado} Um processo solicitou acesso a um objeto, mas o direito de acesso não lhe foi concedido. (0xc0000022)
+[0808/160916.878:ERROR:exception_snapshot_win.cc(98)] thread ID 9252 not found in process
+[0808/160916.905:ERROR:process_reader_win.cc(123)] NtOpenThread: {Acesso Negado} Um processo solicitou acesso a um objeto, mas o direito de acesso não lhe foi concedido. (0xc0000022)
+[0808/160916.905:ERROR:exception_snapshot_win.cc(98)] thread ID 11924 not found in process

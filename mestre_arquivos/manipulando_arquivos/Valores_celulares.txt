@@ -1,0 +1,9 @@
+850
+2230
+1500
+3500
+5000
+245
+757
+
+Criando arquivos com Python
