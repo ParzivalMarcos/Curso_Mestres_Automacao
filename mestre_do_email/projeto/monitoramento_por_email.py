@@ -3,9 +3,17 @@ import schedule
 import time
 import os
 from mail_module import Emailer
+from selenium.webdriver.chrome.options import Options
+
+chrome_options = Options()
+chrome_options.binary_location = os.environ.get('GOOGLE_CHROME_BIN')
+chromedriver = os.environ.get('CHROMEDRIVER_PATH')
 
 
-chromedriver = os.getcwd() + os.sep + 'chromedriver.exe'
+# Configurações para deploy no heroku
+chrome_options.add_argument('--headless')  # Roda sem o navegador aberto
+chrome_options.add_argument('--disable-dev-shm-usage')  # Roda em maquinas leves
+chrome_options.add_argument('--no-sandbox')  # Para servidores linux
 driver = webdriver.Chrome(executable_path=chromedriver)
 
 # Acessando site para monitorar
@@ -25,9 +33,11 @@ def verificar_mudancas():
 
 
 def enviar_email(mensagem):
-    mail = Emailer(email_remetente='marcosmarinhodev@gmail.com',
-                        senha_email='***')
-    lista_contatos = ['marcolim977@gmail.com']    
+    # marcosmarinhodev@gmail.com
+    # devmarinhomarcos
+    mail = Emailer(email_remetente=os.environ.get('EMAIL_REMETENTE'),
+                        senha_email=os.environ.get('SENHA_EMAIL'))
+    lista_contatos = ['marcosmarinhodev@gmail.com']    
     mail.conteudo_email('O preço foi ALTERADO!',lista_contatos, mensagem)
     mail.enviar(1)
 
