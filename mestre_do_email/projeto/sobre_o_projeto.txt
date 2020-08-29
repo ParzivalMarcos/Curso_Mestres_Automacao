@@ -1,0 +1,2 @@
+Monitorar o preço do plano basico, e quando alterado, ser notificado
+1) Site: https://cursoautomacao.netlify.app/dinamico
