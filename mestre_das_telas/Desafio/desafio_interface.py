@@ -26,6 +26,10 @@ layout = [
 
 window = sg.Window('Janela Login', layout)
 
+def exit_program():
+    window.close()
+    sys.exit()
+    
 while True:
     event, values = window.Read()
    
@@ -36,14 +40,11 @@ while True:
         for usuario in usuarios:
             if usuario['usuario'] == user and usuario['senha'] == passw:
                 sg.popup('Login correto')
-                fechar_janela()
+                exit_program()
             else:
                 window['acesso'].update(visible=True)
             
 
-    if event == sg.WINDOW_CLOSED or event == 'Sair':
-        fechar_janela()
+    if event in (sg.WIN_CLOSED, None, 'Sair'):
+        exit_program()
 
-def fechar_janela():
-    window.close()
-    sys.exit()
