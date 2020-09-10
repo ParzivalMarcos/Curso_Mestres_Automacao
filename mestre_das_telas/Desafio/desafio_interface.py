@@ -1,9 +1,9 @@
 import PySimpleGUI as sg
-import sys
 
 
 class Program:
     def __init__(self):
+
         self.usuarios = [
             {
                 'usuario': 'marcos',
@@ -15,33 +15,39 @@ class Program:
             },       
         ]
 
+        self.licences = ['MAKDO29SLD-MAKDO29SLD-MAKDO29SLD-MAKDO29SLD',
+                    'ASD123LASD-ASD123LASD-ASD123LASD-ASD123LASD',
+                    'PADEL3R2KA-PADEL3R2KA-PADEL3R2KA-PADEL3R2KA']
+
     def main(self):
-        sg.theme('DarkBlue3')
-        screen_login = self.create_login_screen()
+
+        screen_login, screen_licence = self.create_login_screen(), None
 
         while True:
             window, event, values = sg.read_all_windows()
 
-            # Validações Tela de Login
             if window == screen_login and event == 'Login':
-                user = values['user']
-                passw = values['pass']
-
                 for usuario in self.usuarios:
-                    if usuario['usuario'] == user and usuario['senha'] == passw:
-                        sg.popup('Login correto')
-                        window.close()
-                        sys.exit()
+                    if usuario['usuario'] == values['user'] and usuario['senha'] == values['pass']:
+                        screen_login.close()
+                        screen_licence = self.create_license_screen()
                     else:
                         window['acesso'].update(visible=True)
-                    
+                        pass
 
-            if window == screen_login and event in (sg.WIN_CLOSED, None, 'Sair'):
-                window.close()
-                sys.exit()
+            if window == screen_licence and event == 'Validar Licensa':
+                if values['licensa'] in self.licences:
+                    sg.popup('Licensa Registrada com sucesso!!')
+                else:
+                    screen_licence['lic_invalida'].update(visible=True)
+
+            if event in (sg.WIN_CLOSED, None, 'Sair'):
+                break
+        window.close()
 
 
     def create_login_screen(self):
+        sg.theme('Reddit')
         layout = [
             [sg.Text('Digite seu usuário')],
             [sg.Input(key='user')],
@@ -51,8 +57,18 @@ class Program:
             [sg.Text(key='acesso', text='Login inválido', visible=False, text_color='red')],
             [sg.Button('Login'), sg.Button('Sair')]
         ]
-
         return sg.Window('Janela Login', layout, finalize=True)
+
+
+    def create_license_screen(self):
+        sg.theme('Reddit')
+        layout = [
+            [sg.Text('Favor digitar sua licença para continuar')],
+            [sg.Input(key='licensa')],
+            [sg.Button('Validar Licensa')],
+            [sg.Text('Licença Inválida', key='lic_invalida', visible=False, text_color='red')]
+        ]
+        return sg.Window('Janela Licensa', layout, finalize=True)
 
 
 program = Program()
